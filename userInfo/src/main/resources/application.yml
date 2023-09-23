@@ -1,0 +1,11 @@
+server:
+  port: 1102
+spring:
+  datasouce:
+    url: jdbc:mysql://localhost:3306/mahabala
+  datasource:
+    password: root-123
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update

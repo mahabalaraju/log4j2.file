@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+      worker_app:
+         image: "worker_app" 
+         build: .
+         restart: always
+       
+         ports:
+            - "1102:1102"
+         container_name: "raj_container"
+    
+                
+     

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+<table th:each="w:${user}">
+<tr> 
+<td><h3>User</h3></td>
+<td><h3 th:text="*{Name}"></h3></td>
+</tr>
+<tr>
+<td><h3>Email</h3></td>
+<td><h3 th:text="*{Email}"></h3></td>
+ </tr>
+</table>
+<a th:href="@{/adduser}" class ="btn btn-primary">add new user</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/" th:object="${dto}" method="post">
+    <input type="number" th:id="ticketPrice" th:field="*{ticketPrice}"/>
+    <input type="number" th:id="noOfTickets" th:field="*{noOfTickets}"/>
+    <input type="number" th:id="ticketDiscount" th:field="*{ticketDiscount}"/>
+
+    <span th:text="*{noOfTickets * ticketPrice - (ticketDiscount != 0 ? ticketDiscount: 0)}"
+      th:id="totalPrice"/>
+
+    <input type="submit" value="Subscribe!"/>
+</form>
+<span th:text="*{totalPrice}"></span>
+<span th:text="${dto.totalPrice}"></span>
+<span th:text="*{getTotalPrice()}"></span>
+</body>
+</html>
